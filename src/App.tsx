@@ -5,6 +5,7 @@ import { Navbar } from './components/navbar'
 import {Footer} from './components/footer';
 import './index.css'
 import Boadroom from './pages/boadroom'
+import BasedDex from './pages/baseddex';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
             <Route path='/' element={<Dashboard/>}/>
             <Route path='/farm' element={<Farm/>}/>
             <Route path='/boadroom' element={<Boadroom/>}/>
-            <Route path='/dex' element={<Dashboard/>}/>
+            <Route path='/dex' element={<BasedDex/>}/>
           </Routes>
         </div>
       </BrowserRouter>
