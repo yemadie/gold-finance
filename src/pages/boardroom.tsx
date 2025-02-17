@@ -1,6 +1,6 @@
 import Card from "../components/card";
 
-export default function Boadroom () {
+export default function Boardroom () {
     return(
         <div>
             <div>

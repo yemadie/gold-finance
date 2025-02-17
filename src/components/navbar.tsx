@@ -10,10 +10,10 @@ interface NavLinkType {
 }
 
 const navLinks : NavLinkType[] =[
-    {name: 'Dashboard', path: '/'},
-    {name: 'Farm', path: '/farm'},
-    {name: 'Boadroom', path: '/boadroom'},
-    {name: 'BaseDex', path: '/dex'}
+    {name: 'DASHBOARD', path: '/'},
+    {name: 'FARM', path: '/farm'},
+    {name: 'BOARDROOM', path: '/boardroom'},
+    {name: 'BASEDEX', path: '/dex'}
 ]
 
 
@@ -21,7 +21,7 @@ export const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
         <>    
-            <header className='w-full fixed top-0 shadow-sm shadow-neutral-500 h-16 flex items-center z-10'>
+            <header className='w-full fixed top-0 shadow-sm shadow-neutral-500 h-21 flex items-center z-10'>
                 <button aria-labelledby='Toggle Sidebar' className='flex items-center justify-center p-2 bg-gray-800 text-white rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition'
                         onClick={() => setIsMenuOpen(!isMenuOpen)}    
                     >
@@ -33,7 +33,7 @@ export const Navbar = () => {
                 </button>
                 <nav className='flex justify-between items-center w-full px-4'>
                     
-                    <NavLink to='/' className='font-sans text-amber-600 text-3xl'>
+                    <NavLink to='/' className='font-sans text-3xl text-[#C09028]'>
                         Gold Finance
                     </NavLink>
                     <ul className='flex items-center text-white gap-8'>
