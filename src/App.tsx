@@ -13,7 +13,7 @@ function App() {
     <main className='w-full'>
       <BrowserRouter>
         <Navbar />
-        <div className='w-full overflow-x-auto text-white'>
+        <div className='w-full py-32 px-10 overflow-x-auto text-white max-w-[1280px] mx-auto'>
           <Routes>
             <Route path='/' element={<Dashboard/>}/>
             <Route path='/farm' element={<Farm/>}/>
