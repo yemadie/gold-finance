@@ -16,7 +16,7 @@ export default function Dashboard() {
             <div>
               <h3 className="pt-4">GoldShare</h3>
               <div className="flex pt-4">
-                <img src="/src/assets/obol.698d2518.svg" alt="" className="w-24 h-24 rounded-lg" />
+                <img src="../public/assets/obol.698d2518.svg" alt="" className="w-24 h-24 rounded-lg" />
                 <div className="pl-12 pt-8">
                   <h3 className="mb-0 pb-0">SELL TAX</h3>
                   <h3 className="pb-8">10%</h3>
