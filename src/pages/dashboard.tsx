@@ -40,7 +40,7 @@ export default function Dashboard() {
             <div>
               <h3 className="pt-4">GoldCoin</h3>
               <div className="flex pt-4">
-                <img src="/src/assets/smelt.4d7573dc.svg" alt="" className="w-24 h-24 rounded-lg" />
+                <img src="../public/assets/smelt.4d7573dc.svg" alt="" className="w-24 h-24 rounded-lg" />
                 <div className="pl-12 pt-8">
                   <h3 className="mb-0 pb-0">SELL TAX</h3>
                   <h3 className="pb-8">10%</h3>
@@ -63,7 +63,7 @@ export default function Dashboard() {
               <div>
                 <h3  className="pt-4 pb-6">GoldShare-FTM LP</h3>
                 <div className="flex justify-between">
-                  <img src="/src/assets/obol-ftm-lp.f61a46a0.svg" alt="" className="w-24 h-24 rounded-lg" />
+                  <img src="../public/assets/obol-ftm-lp.f61a46a0.svg" alt="" className="w-24 h-24 rounded-lg" />
                   <ul className="mb-8">
                     <li>1.07 OBOL/0.93 FTM</li>
                     <li>$0.45</li>
@@ -83,7 +83,7 @@ export default function Dashboard() {
             <div>
               <h3  className="pt-4 pb-6">GoldCoin-FTM LP</h3>
               <div className="flex justify-between">
-                <img src="/src/assets/obol-ftm-lp.f61a46a0.svg" alt="" className="w-24 h-24 rounded-lg" />
+                <img src="../public/assets/obol-ftm-lp.f61a46a0.svg" alt="" className="w-24 h-24 rounded-lg" />
                 <ul className="mb-8">
                   <li>1.07 OBOL/0.93 FTM</li>
                   <li>$0.45</li>
