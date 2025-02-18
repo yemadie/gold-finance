@@ -49,7 +49,7 @@ body {
   place-items: center;
   min-height: 100vh;
   width: -webkit-fill-available;
-  background: url(./assets/bgrond_22.jpg);
+  background: url(../public/assets/bgrond_22.jpg);
   background-size: cover;
 }
 
