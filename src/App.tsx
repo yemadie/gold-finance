@@ -1,8 +1,8 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Dashboard from './pages/dashboard'
 import Farm from './pages/farm'
-import { Navbar } from './components/navbar'
-import {Footer} from './components/footer';
+import { Navbar } from './pages/navbar'
+import {Footer} from './pages/footer';
 import './index.css'
 import Boardroom from './pages/boardroom'
 import BasedDex from './pages/baseddex';
@@ -20,7 +20,6 @@ function App() {
             <Route path='/boardroom' element={<Boardroom/>}/>
             <Route path='/dex' element={<BasedDex/>}/>
           </Routes>
-          
         </div>
       </BrowserRouter>
       <Footer/>
