@@ -1,15 +1,16 @@
 
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import "../easebutton.css";
 
 interface EaseButtonProps {
-    children: ReactElement
+    children: React.ReactNode;
+    onClick: () => void;
 }
 
-const EaseButton = ({children}:EaseButtonProps) => {
+const EaseButton: React.FC<EaseButtonProps> = ({ children, onClick }) => {
   const [ripple, setRipple] = useState<{ x: number; y: number } | null>(null);
 
-  const materializeEffect = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  const materializeEffect = (event: React.MouseEvent<HTMLButtonElement>) => {
     const button = event.currentTarget;
     const { left, top } = button.getBoundingClientRect();
     const x = event.clientX - left;
@@ -17,26 +18,25 @@ const EaseButton = ({children}:EaseButtonProps) => {
 
     setRipple({ x, y });
 
+    // Reset the ripple after animation duration (500ms)
     setTimeout(() => {
-      setRipple(null); // Remove the ripple after animation is done
-    }, 500); // Match the duration of the ripple animation
+      setRipple(null);
+    }, 500);
   };
 
   return (
-    <div className="body">
-      <button className="button" onClick={materializeEffect}>
-        {ripple && (
-          <div
-            className="circle"
-            style={{
-              left: `${ripple.x}px`,
-              top: `${ripple.y}px`,
-            }}
-          />
-        )}
-       {children} 
-      </button>
-    </div>
+    <button className="button" onClick={(e) => { materializeEffect(e); onClick(); }}>
+      {ripple && (
+        <div
+          className="circle"
+          style={{
+            left: `${ripple.x}px`,
+            top: `${ripple.y}px`,
+          }}
+        />
+      )}
+      {children}
+    </button>
   );
 };
 

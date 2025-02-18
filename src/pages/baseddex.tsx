@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+// import { useState } from "react";
 import ActivePools from "../components/activePools";
 import Liquidity from "../components/liquidity";
-import EaseButton from "../components/easebutton";
+// import EaseButton from "../components/easebutton";
+
+const TAB = {
+    POOL: "pool",
+    LIQUIDITY: "liquidity"
+}
 
 export default function BasedDex() {
-  const [activeTab, setActiveTab] = useState("ACTIVE POOLS");
+//   const [activeTab, setActiveTab] = useState<any>("ACTIVE POOLS");
   
-  const handleTabClick = (tab: string) => {
-    setActiveTab(tab);
-  };
-
-  const activePools = "ACTIVE POOLS";
-  const liquidity = "LIQUIDITY";
+//   const handleTabClick = (tab: string) => {
+//     setActiveTab(tab);
+//   };
+const activeTab = TAB.POOL;
 
   return (
     <div>
@@ -26,7 +29,7 @@ export default function BasedDex() {
       </div>
 
       <div className="mt-16 p-4">
-        {activeTab === "ACTIVE POOLS" ? <ActivePools /> : <Liquidity />}
+        {activeTab === TAB.POOL ? <ActivePools /> : <Liquidity />}
       </div>
     </div>
   );
