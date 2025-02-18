@@ -2,7 +2,7 @@ import Card from "../components/card";
 
 export default function Boardroom () {
     return(
-        <div>
+        <div className="text-center">
             <div className="grid grid-cols-4 gap-10">
                 <Card>
                     <h3>Next Epoch</h3>
@@ -29,24 +29,33 @@ export default function Boardroom () {
                 </Card>
             </div>
             <button className="yellow-600-btn mx-auto">Kick Infinite Printer When Timer Exprires</button>
-            <div className="grid grid-cols-2 gap-16">
-                <Card>
-                    <div className="logo"></div>
-                    <h3>0.0000</h3>
-                    <p>≈ $0.00</p>
-                    <p>GoldCoin Earned</p>
-                    <button className="yellow-600-btn">CLAIM REWARD</button>
-                </Card>
-                <Card>
-                    <div className="logo"></div>
-                    <h3>0.0000</h3>
-                    <p>≈ $0.00</p>
-                    <p>GoldCoin Earned</p>
-                    <ul>
-                        <button>-</button>
-                        <button>+</button>
-                    </ul>
-                </Card>
+            <div className="flex justify-center items-center gap-x-8">
+                <div className="w-1/4 pl-8 pr-4">
+                    <Card>
+                        <div className="flex flex-col items-center justify-center text-center mb-8">
+                            <img src="../public/assets/obol.698d2518.svg" alt="" className="w-24 h-24 rounded-lg mb-8 mt-6" />
+                            <h2 className="text-3x1 font-bold">0.0000</h2>
+                            <p>≈ $0.00</p>
+                            <p className="mb-8">GoldCoin Earned</p>
+                            <button className="yellow-600-btn">CLAIM REWARD</button>
+                        </div>
+                    </Card>
+                </div>
+                <div className="w-1/4 pl-4 pr-8">
+                    <Card>
+                        <div className="flex flex-col items-center justify-center text-center mb-8">
+                            <img src="../public/assets/obol.698d2518.svg" alt="" className="w-24 h-24 rounded-lg mb-8 mt-6" />
+                            <h2 className="text-3x1 font-bold">0.0000</h2>
+                            <p>≈ $0.00</p>
+                            <p className="mb-8">GoldCoin Earned</p>
+                            <ul className="flex justify-center gap-4">
+                                <button className="yellow-600-btn-rounded">-</button>
+                                <button className="yellow-600-btn-rounded">+</button>
+                            </ul>
+                        </div>
+                    </Card>
+                </div>
+                
             </div>
         </div>
     )
