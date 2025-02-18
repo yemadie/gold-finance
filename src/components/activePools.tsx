@@ -2,9 +2,9 @@ import CardDex from "./carddex"
 
 export default function ActivePools () {
     return (
-            <div className="grid grid-cols-2 gap-10">
+        <div className="flex items-start h-screen grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
             <CardDex>
-                <div className="flex flex-col gap-y-2 p-4">
+                <div className="flex flex-col gap-y-4 sm:p-4 p-2">
                     <CardDex>
                         <div className="flex justify-between up-part-of-gold-box m-3">
                             <div className="flex items-center border border-[#BD9945] rounded-[8px] px-2 text-[#BD9945]">
@@ -60,3 +60,7 @@ export default function ActivePools () {
         </div>
     )
 }
+
+
+
+

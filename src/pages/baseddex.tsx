@@ -1,60 +1,47 @@
-// import { useState } from "react";
+import { useState } from "react";
 import ActivePools from "../components/activePools";
 import Liquidity from "../components/liquidity";
-// import EaseButton from "../components/easebutton";
 
-const TAB = {
-    POOL: "pool",
-    LIQUIDITY: "liquidity"
-}
+export default function BasedDex () {
+    const [activeTab, setActiveTab] = useState("ACTIVE POOLS");
 
-export default function BasedDex() {
-//   const [activeTab, setActiveTab] = useState<any>("ACTIVE POOLS");
-  
-//   const handleTabClick = (tab: string) => {
-//     setActiveTab(tab);
-//   };
-const activeTab = TAB.POOL;
-
-  return (
-    <div>
-      <div className="w-full max-w-[1280px] fixed top-40">
-        {/* <nav className="w-full px-4">
-          <div className="flex text-white">
-            <EaseButton onClick={() => handleTabClick(activePools)}>{activePools}</EaseButton>
-            <EaseButton onClick={() => handleTabClick(liquidity)}>{liquidity}</EaseButton>
-          </div>
-        </nav> */}
-        <div className="border-b border-yellow-500"></div>
-      </div>
-
-      <div className="mt-16 p-4">
-        {activeTab === TAB.POOL ? <ActivePools /> : <Liquidity />}
-      </div>
-    </div>
-  );
-}
-
-
-{/* <button
-                            className={`dex-inner-btn ${
+    return(
+        <div>
+            <div className="flex flex-col items-start">
+                <nav className='w-full px-4'>
+                    <div className='text-white flex border-b border-yellow-500'>
+                        <button
+                            className={`dex-inner-btn px-6 py-2 mr-4 ${
                                 activeTab === "ACTIVE POOLS"
                                     ? "border-b-2 border-yellow-500"
-                                    : "border-transparent hover:border-yellow-500 rounded-tl-lg rounded-tr-lg"
+                                    : "border-b-2 border-transparent hover:border-yellow-500 rounded-tl-lg "
                             }`}
                             onClick={() => setActiveTab("ACTIVE POOLS")}
                         >
-                            <span className="absolute inset-0 bg-yellow-300 transition-all duration-300 ease-in-out transform scale-0 hover:scale-100"></span>
+                           <span className="absolute inset-0 bg-yellow-300 transition-all duration-300 ease-in-out transform scale-0 hover:scale-100"></span>
                             ACTIVE POOLS
                         </button>
                         <button
-                            className={`dex-inner-btn ${
+                            className={`dex-inner-btn  px-6 py-2 ${
                                 activeTab === "LIQUIDITY"
                                     ? "border-b-2 border-yellow-500"
-                                    : "border-transparent hover:border-yellow-500 rounded-tl-lg rounded-tr-lg"
+                                    : "border-b-2 border-transparent hover:border-yellow-500 rounded-tl-lg"
                             }`}
                             onClick={() => setActiveTab("LIQUIDITY")}
                         >
                             <span className="absolute inset-0 bg-yellow-300 transition-all duration-300 ease-in-out transform scale-0 hover:scale-100"></span>
                             LIQUIDITY
-                        </button> */}
+                        </button>
+                    </div>
+                </nav>
+                <div className="border-b border-yellow-500 mx-4 w-full"></div>
+            </div>
+            
+            <div className="p-4">
+                {activeTab === "ACTIVE POOLS" ? <ActivePools/> : <Liquidity/>}
+            </div>
+        </div>
+    )
+}
+
+

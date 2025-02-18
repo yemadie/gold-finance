@@ -4,7 +4,7 @@ export default function Dashboard() {
   return (
     <>
       <div className="space-y-">
-        <div className="grid grid-cols-2 gap-10 mb-0">
+        <div className="mb-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           <div className="mb-10">
             <Card>
               <h3 className="text-[#C09028] pt-4">Total Value Locked</h3>
@@ -15,12 +15,13 @@ export default function Dashboard() {
             <div className="logo"></div>
             <div>
               <h3 className="pt-4">GoldShare</h3>
-              <div className="flex pt-4">
+              <div className="flex justify-between pt-4">
                 <img src="../public/assets/obol.698d2518.svg" alt="" className="w-24 h-24 rounded-lg" />
-                <div className="pl-12 pt-8">
+                <div className="text-center pt-8">
                   <h3 className="mb-0 pb-0">SELL TAX</h3>
                   <h3 className="pb-8">10%</h3>
                 </div>
+                <div></div>
               </div>
               <div>
                 <h5>Current Price</h5>
@@ -34,7 +35,7 @@ export default function Dashboard() {
             </div>
           </Card>
         </div>
-        <div className="grid grid-cols-2 gap-10 mb-0">
+        <div className="mb-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           <Card>
           <div className="logo"></div>
             <div>
@@ -45,6 +46,7 @@ export default function Dashboard() {
                   <h3 className="mb-0 pb-0">SELL TAX</h3>
                   <h3 className="pb-8">10%</h3>
                 </div>
+                <div></div>
               </div>
               <div>
                 <h5>Current Price</h5>
@@ -77,7 +79,7 @@ export default function Dashboard() {
           </div>
           
         </div>
-        <div className="grid grid-cols-2 gap-10">
+        <div className="mb-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
           <Card>
             <div className="logo"></div>
             <div>
